@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+
+.master-container{
+  background-color: white;
+  height: 100vh;
+}
+
+.container{
+  text-align: center;
+  padding: 250px;
+  padding-left: 0px;
+  padding-right: 200px;
+
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+}
