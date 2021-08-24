@@ -1,1 +1,23 @@
-<h1>"Hello buddy"</h1>
+<div class="container">
+  <h1>Say hello to our animal friends from the past 🦖 </h1>
+  <br>
+  <div class="ol-xs-12 col-sm-6 col-md-3">
+    <ul id="animals">
+      <% @animals.each do |animal| %>
+        <li>
+          <% if @animals.present? %>
+            <i class="fa fa-check-square-o"></i>
+          <% else %>
+            <i class="fa fa-square-o"></i>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <hr>
+
+  <%# link_to new_animal_path do %>
+    <i class="fa fa-plus"></i> Let's add a new animal friend 🦕
+   <%# end %>
+</div>
