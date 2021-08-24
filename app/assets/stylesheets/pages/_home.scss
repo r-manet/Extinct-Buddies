@@ -10,7 +10,6 @@
   padding: 250px;
   padding-left: 0px;
   padding-right: 200px;
-
 }
 
 .btn-ghost {
@@ -22,4 +21,9 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
 
+}
+
+.animal-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
