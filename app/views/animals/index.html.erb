@@ -1,19 +1,19 @@
 <div class="container">
   <h1>Say hello to our animal friends from the past 🦖 </h1>
-  <br>
-  <div class="ol-xs-12 col-sm-6 col-md-3">
-    <ul id="animals">
-      <% @animals.each do |animal| %>
-        <li>
-          <% if @animals.present? %>
-            <i class="fa fa-check-square-o"></i>
-          <% else %>
-            <i class="fa fa-square-o"></i>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+  <div class="d-flex justify-content-between align-items-start">
+    <%# <div class="ol-xs-12 col-sm-6 col-md-3"> %>
+    <% @animals.each do |animal| %>
+      <div>
+        <img src="<%= animal.image %>" alt="image of the creature">
+        <div>
+          <%= animal.name %>
+          <p><%= animal.price %>£</p>
+        </div>
+      </div>
+    <% end %>
   </div>
+  </div>
+
 
   <hr>
 
