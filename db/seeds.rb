@@ -17,21 +17,25 @@ raph = User.create!({
   name: "Raph",
   password: "111111"
 })
-raph.save
 
 manuela = User.create!({
   email: "manuela@lewagon.com",
   name: "Manuela",
   password: "121212"
 })
-manuela.save
 
-user_array = %w(manuela raph)
+catherine = User.create!({
+  email: "catherine@lewagon.com",
+  name: "Catherine",
+  password: "999999"
+})
+
+user_array = [manuela, raph, catherine]
 
 puts 'Creating Animals...'
 
 alphina = Animal.create!({
-  description: "With a beautiful plumage, Diego will rob you dry",
+  description: "With a beautiful plumage, Alphina will rob you dry",
   price: 231_000,
   species: "Raphus cucullatus",
   category: "Dodo",
@@ -41,8 +45,8 @@ alphina = Animal.create!({
   user: user_array.sample,
   habitat: "land",
   location: "Mauritius",
+  image: "https://static.wikia.nocookie.net/iceage/images/7/76/Dab.png/revision/latest?cb=20151201225724"
 })
-alpina.save
 
 constantinople= Animal.create!({
   description: "Constantinople is a sleepy boy, don't let him nap on your roof!",
@@ -55,8 +59,8 @@ constantinople= Animal.create!({
   user: user_array.sample,
   habitat: "plains and forests",
   location: "Buckingham Palace",
+  image: "https://static1.funidelia.com/238382-f4_big/inflatable-diplodocus-costume-for-adults-.jpg"
 })
-constantinople.save
 
 rufus = Animal.create!({
   description: "Surprinsingly, Rufus is a genius in mathematics!",
@@ -69,8 +73,8 @@ rufus = Animal.create!({
   user: user_array.sample,
   habitat: "forests and grasslands",
   location: "Paris",
+  image: "https://museumsvictoria.com.au/media/6015/tasmanian-tiger.jpg?width=892&height=558&bgcolor=fff"
 })
-rufus.save
 
 manny = Animal.create!({
   description: "A bit of a grump",
@@ -83,8 +87,8 @@ manny = Animal.create!({
   user: user_array.sample,
   habitat: "land",
   location: "New York",
+  image: "https://static.wikia.nocookie.net/bstudios/images/0/05/Manny.png/revision/latest?cb=20180730075232"
 })
-manny.save
 
 scrat= Animal.create!({
   description: "Has a slight obsession for acorns ",
@@ -96,9 +100,9 @@ scrat= Animal.create!({
   age_ago: 96_000_000,
   user: user_array.sample,
   habitat: "land",
-  location: "tokyo",
+  location: "Tokyo",
+  image: "https://static.wikia.nocookie.net/p__/images/0/0b/Scrat_%28Ice_Age%29.png/revision/latest?cb=20200725151850&path-prefix=protagonist"
 })
-scrat.save
 
 diego = Animal.create!({
   description: "Looks rough, but is a nice fella",
@@ -111,7 +115,7 @@ diego = Animal.create!({
   user: user_array.sample,
   habitat: "Mountains",
   location: "Rio de Janeiro",
+  image: "https://www.seekpng.com/png/detail/318-3182901_diego1-diego-ice-age.png"
 })
-diego.save
 
 puts 'Finished!'
