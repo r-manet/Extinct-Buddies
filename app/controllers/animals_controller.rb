@@ -31,6 +31,7 @@ class AnimalsController < ApplicationController
       redirect_to animal_path(@animal)
     else
       render :edit
+    end
   end
 
   def destroy
@@ -47,4 +48,5 @@ class AnimalsController < ApplicationController
   def animal_params
     params.require(:animal).permit(:description, :price, :species, :category, :name, :requirement, :habitat, :location, :age_ago)
   end
+
 end
