@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 
 .master-container{
-padding-top: -20px;
+padding-top: 20px;
 height: 100vh;
 display:flex;
 align-items: flex-start;
@@ -13,13 +13,13 @@ background-size: cover;
 
 .btn-flat {
   color: white;
-  padding: 10px 28px;
-  border-radius: 50%;
+  padding: 8px 24px;
+  border-radius: 4px;
   background: black;
   transition: background 0.3s ease;
-  position:absolute;
-  top: 40%;
+  top: 35%;
   left: 65%;
+  position: absolute;
 }
 
 .btn-flat:hover {
