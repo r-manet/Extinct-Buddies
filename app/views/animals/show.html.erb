@@ -16,6 +16,8 @@
           <p>" <%= @animal.description %> "</p>
           <i class="fa fa-heart" aria-hidden="true"></i>
           <p>What you need to know: <strong> <%= @animal.requirement %> </strong> </p>
+
+          <%= link_to 'Book your animal', new_animal_booking_path(@animal) %>
         </div>
     </div>
   </div>
