@@ -7,8 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning database..."
-User.destroy_all
+Booking.destroy_all
 Animal.destroy_all
+User.destroy_all
+
 
 puts 'Creating Users...'
 
@@ -45,7 +47,7 @@ alphina = Animal.create!({
   user: user_array.sample,
   habitat: "land",
   location: "Mauritius",
-  image: "https://static.wikia.nocookie.net/iceage/images/7/76/Dab.png/revision/latest?cb=20151201225724"
+  image: "https://static.wikia.nocookie.net/iceage/images/7/76/Dab.png"
 })
 
 constantinople= Animal.create!({
@@ -73,7 +75,7 @@ rufus = Animal.create!({
   user: user_array.sample,
   habitat: "forests and grasslands",
   location: "Paris",
-  image: "https://museumsvictoria.com.au/media/6015/tasmanian-tiger.jpg?width=892&height=558&bgcolor=fff"
+  image: "https://museumsvictoria.com.au/media/6015/tasmanian-tiger.jpg"
 })
 
 manny = Animal.create!({
@@ -87,7 +89,7 @@ manny = Animal.create!({
   user: user_array.sample,
   habitat: "land",
   location: "New York",
-  image: "https://static.wikia.nocookie.net/bstudios/images/0/05/Manny.png/revision/latest?cb=20180730075232"
+  image: "https://static.wikia.nocookie.net/bstudios/images/0/05/Manny.png"
 })
 
 scrat= Animal.create!({
@@ -101,7 +103,7 @@ scrat= Animal.create!({
   user: user_array.sample,
   habitat: "land",
   location: "Tokyo",
-  image: "https://static.wikia.nocookie.net/p__/images/0/0b/Scrat_%28Ice_Age%29.png/revision/latest?cb=20200725151850&path-prefix=protagonist"
+  image: "https://i.pinimg.com/originals/f5/85/c5/f585c57624be7f0c44436ac00afb44d6.png"
 })
 
 diego = Animal.create!({
