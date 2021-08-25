@@ -2,7 +2,7 @@
 <ol>
   <div>
     <% @bookings.each do |item| %>
-      <li>Your booking for <%= item.animal.name%> is from the <%= item.start_date %> to the <%=item.end_time  %></li>
+      <li>Your booking for <%= item.animal.name%> is from the <%= item.start_date.strftime("%d/%m/%Y at %H:%M") %> to the <%=item.end_time  %></li>
     <% end %>
   </div>
 </ol>
