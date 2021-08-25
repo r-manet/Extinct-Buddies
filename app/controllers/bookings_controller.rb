@@ -1,5 +1,8 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: :show
+  before_action :set_booking, only: [:show, :new, :create]
+
+  def show
+  end
 
   def new
     @booking = Booking.new
@@ -7,24 +10,27 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user_id = @user.id
+    @booking.animal = @animal
+    @booking.user = current_user
     if @booking.save
-      redirect_to booking_path(@booking)
+      # redirect_to animal_booking_path(@animal, @booking)
+      redirect_to my_bookings_path
     else
       render :new
     end
   end
 
-  def show
+  def user_index
+    @bookings = Booking.where(user: current_user)
   end
 
   private
 
   def set_booking
-    @booking = Booking.find(params[:id])
+    @animal = Animal.find(params[:animal_id])
   end
 
   def booking_params
-    params.require(:booking).permit(:start_time, :end_time)
+    params.require(:booking).permit(:start_date, :end_time)
   end
 end
