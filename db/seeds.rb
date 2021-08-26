@@ -38,7 +38,7 @@ puts 'Creating Animals...'
 
 
 alphina = Animal.new({
-  description: "With a beautiful plumage, Alphina will rob you dry",
+  description: "With a beautiful plumage, Alphina will rob you dry with grace, style and most importantly, class!",
   price: 231_000,
   species: "Raphus cucullatus",
   category: "Dodo",
@@ -98,7 +98,7 @@ puts "rufus created!"
 
 
 manny = Animal.new({
-  description: "A bit of a grump",
+  description: "Manny just wants to be left alone. He's a bit of a grump",
   price: 20_000,
   species: "Elephas primigenius",
   category: "Mammoth",
@@ -118,12 +118,12 @@ puts "manny created!"
 
 
 scrat= Animal.new({
-  description: "Has a slight obsession for acorns ",
+  description: "Scrat is a well travelled creature! He may or may not have a slight obsession for acorns... ",
   price: 2,
   species: "Cronopio dentiacutus",
   category: "Saber-toothed squirrel",
   name: "Scrat",
-  requirement: "Have a acorn for him, if you don't want a untimely disaster",
+  requirement: "Have an acorn ready for him, if you don't want a untimely disaster",
   age_ago: 96_000_000,
   user: user_array.sample,
   habitat: "land",
@@ -138,12 +138,12 @@ puts "scrat created!"
 
 
 diego = Animal.new({
-  description: "Looks rough, but is a nice fella",
+  description: "Diego has gone through a lot. He used to a double traitor. But now, he is a nice fella",
   price: 200_759,
   species: "Smilodon populator",
   category: "Saber-tooth tiger",
   name: "Diego",
-  requirement: "A human baby",
+  requirement: "He has a history of stealing human babies",
   age_ago: 12_000,
   user: user_array.sample,
   habitat: "Mountains",
