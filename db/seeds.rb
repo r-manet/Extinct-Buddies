@@ -11,7 +11,6 @@ Booking.destroy_all
 Animal.destroy_all
 User.destroy_all
 
-
 puts 'Creating Users...'
 
 raph = User.create!({
@@ -36,7 +35,9 @@ user_array = [manuela, raph, catherine]
 
 puts 'Creating Animals...'
 
-alphina = Animal.create!({
+
+
+alphina = Animal.new({
   description: "With a beautiful plumage, Alphina will rob you dry",
   price: 231_000,
   species: "Raphus cucullatus",
@@ -46,11 +47,17 @@ alphina = Animal.create!({
   age_ago: 231,
   user: user_array.sample,
   habitat: "land",
-  location: "Mauritius",
-  image: "https://static.wikia.nocookie.net/iceage/images/7/76/Dab.png"
+  location: "Mauritius"
 })
 
-constantinople= Animal.create!({
+puts "alphina on its way "
+file = URI.open('https://static.wikia.nocookie.net/iceage/images/7/76/Dab.png')
+alphina.photo.attach(io: file, filename: 'alphina.png', content_type: 'image/png')
+alphina.save
+
+puts "alphina created!"
+
+constantinople= Animal.new({
   description: "Constantinople is a sleepy boy, don't let him nap on your roof!",
   price: 500_920,
   species: "Diplodocus longus",
@@ -60,11 +67,17 @@ constantinople= Animal.create!({
   age_ago: 145_000_000,
   user: user_array.sample,
   habitat: "plains and forests",
-  location: "Buckingham Palace",
-  image: "https://static1.funidelia.com/238382-f4_big/inflatable-diplodocus-costume-for-adults-.jpg"
+  location: "Buckingham Palace"
 })
 
-rufus = Animal.create!({
+file = URI.open('https://static1.funidelia.com/238382-f4_big/inflatable-diplodocus-costume-for-adults-.jpg')
+constantinople.photo.attach(io: file, filename: 'constantinople.png', content_type: 'image/png')
+constantinople.save
+
+puts "constantinople created!"
+
+
+rufus = Animal.new({
   description: "Surprinsingly, Rufus is a genius in mathematics!",
   price: 40_104,
   species: "Thylacinus cynocephalus",
@@ -74,11 +87,17 @@ rufus = Animal.create!({
   age_ago: 85,
   user: user_array.sample,
   habitat: "forests and grasslands",
-  location: "Paris",
-  image: "https://museumsvictoria.com.au/media/6015/tasmanian-tiger.jpg"
+  location: "Paris"
 })
 
-manny = Animal.create!({
+file = URI.open('https://museumsvictoria.com.au/media/6015/tasmanian-tiger.jpg')
+rufus.photo.attach(io: file, filename: 'rufus.png', content_type: 'image/png')
+rufus.save
+
+puts "rufus created!"
+
+
+manny = Animal.new({
   description: "A bit of a grump",
   price: 20_000,
   species: "Elephas primigenius",
@@ -88,11 +107,17 @@ manny = Animal.create!({
   age_ago: 10_000,
   user: user_array.sample,
   habitat: "land",
-  location: "New York",
-  image: "https://static.wikia.nocookie.net/bstudios/images/0/05/Manny.png"
+  location: "New York"
 })
 
-scrat= Animal.create!({
+file = URI.open('https://static.wikia.nocookie.net/bstudios/images/0/05/Manny.png')
+manny.photo.attach(io: file, filename: 'manny.png', content_type: 'image/png')
+manny.save
+
+puts "manny created!"
+
+
+scrat= Animal.new({
   description: "Has a slight obsession for acorns ",
   price: 2,
   species: "Cronopio dentiacutus",
@@ -102,11 +127,17 @@ scrat= Animal.create!({
   age_ago: 96_000_000,
   user: user_array.sample,
   habitat: "land",
-  location: "Tokyo",
-  image: "https://i.pinimg.com/originals/f5/85/c5/f585c57624be7f0c44436ac00afb44d6.png"
+  location: "Tokyo"
 })
 
-diego = Animal.create!({
+file = URI.open('https://i.pinimg.com/originals/f5/85/c5/f585c57624be7f0c44436ac00afb44d6.png')
+scrat.photo.attach(io: file, filename: 'scrat.png', content_type: 'image/png')
+scrat.save
+
+puts "scrat created!"
+
+
+diego = Animal.new({
   description: "Looks rough, but is a nice fella",
   price: 200_759,
   species: "Smilodon populator",
@@ -116,8 +147,12 @@ diego = Animal.create!({
   age_ago: 12_000,
   user: user_array.sample,
   habitat: "Mountains",
-  location: "Rio de Janeiro",
-  image: "https://www.seekpng.com/png/detail/318-3182901_diego1-diego-ice-age.png"
+  location: "Rio de Janeiro"
 })
+
+file = URI.open('https://static.wikia.nocookie.net/bstudios/images/5/54/Ice_Age_Diego_5.png')
+diego.photo.attach(io: file, filename: 'diego.png', content_type: 'image/png')
+diego.save
+puts "diego created!"
 
 puts 'Finished!'

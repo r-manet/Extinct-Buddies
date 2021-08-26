@@ -3,16 +3,16 @@
   <h5><i class="fa fa-plus"></i> <%= link_to "Let's add a new animal friend 🦕", new_animal_path %></h5>
     <div class="d-flex justify-content-around">
       <div class="animal-grid">
-         <% @animals.each do |animal| %>
-         <div class="animal-card">
-            <img class="card-img-top"src="<%= animal.image %>" alt="image of the creature"style="height: 300px; object-fit: cover;">
-            <div class="card-body"style="background-color: white;">
+        <% @animals.each do |animal| %>
+        <div class="animal-card">
+          <%= cl_image_tag animal.photo.key, class:"card-img-top"%>
+          <div class="card-body"style="background-color: white;">
             <h5 class="card-title"> <%= animal.name %></h5>
             <p class="card-text">£<%= animal.price %></p>
             <%= link_to 'Buddy details', animal_path(animal), :class =>"btn btn-dark"%>
           </div>
-          </div>
-          <% end %>
+        </div>
+        <% end %>
       </div>
     </div>
 </div>
