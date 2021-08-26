@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Say hello to our friends from the past 🦖 </h1>
-  <%# <h5><i class="fa fa-plus"></i> Let's add a new animal friend 🦕</h5> %>
+  <h5><i class="fa fa-plus"></i> <%= link_to "Let's add a new animal friend 🦕", new_animal_path %></h5>
     <div class="d-flex justify-content-around">
       <div class="animal-grid">
          <% @animals.each do |animal| %>
