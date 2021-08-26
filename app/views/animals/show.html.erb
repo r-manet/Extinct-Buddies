@@ -1,7 +1,7 @@
 <div class="d-flex flex-column align-items-center">
   <h1>Here is your animal buddy 🦖</h1>
   <h2 class="text-center"><i> <%= @animal.name%> </i> </h2>
-  <img src="<%= @animal.image %>" alt="image of the creature">
+  <%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %>
 
   <div class="animal-profile">
     <div class="animal-card">
@@ -18,6 +18,14 @@
           <p>What you need to know: <strong> <%= @animal.requirement %> </strong> </p>
 
           <%= link_to 'Book your animal', new_animal_booking_path(@animal) %>
+
+
+
+          <% if @animal.user == current_user%>
+            <p> <%= link_to 'Your animal has changed?', edit_animal_path(@animal) %></p>
+            <p> <%= link_to "Remove", animal_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
+          <% end %>
+
         </div>
     </div>
   </div>

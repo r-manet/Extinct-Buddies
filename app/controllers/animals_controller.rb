@@ -24,7 +24,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
-    @animal.user_id = @user.id
+    @animal.user = current_user
     if @animal.save
       redirect_to animal_path(@animal)
     else
@@ -36,16 +36,24 @@ class AnimalsController < ApplicationController
   end
 
   def update
-    if @animal.update(animal_params)
-      redirect_to animal_path(@animal)
+    if @animal.user == current_user
+      if @animal.update(animal_params)
+        redirect_to animal_path(@animal)
+      else
+        render :edit
+      end
     else
-      render :edit
+      return
     end
   end
 
   def destroy
-    @animal.destroy
-    redirect_to animals_path
+    if @animal.user == current_user
+      @animal.destroy
+      redirect_to animals_path
+    else
+      return
+    end
   end
 
   private
@@ -55,7 +63,7 @@ class AnimalsController < ApplicationController
   end
 
   def animal_params
-    params.require(:animal).permit(:description, :price, :species, :category, :name, :requirement, :habitat, :location, :age_ago)
+    params.require(:animal).permit(:description, :price, :species, :category, :name, :requirement, :habitat, :location, :age_ago, :photo)
   end
 
 end

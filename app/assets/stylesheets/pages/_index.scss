@@ -1,11 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
-h1{
-  padding-top: 20px;
-  justify-content: center;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 12px;
+
+body{
+  background-color: white;
 }
 h5{
   justify-content: center;
@@ -15,6 +12,7 @@ h5{
 }
 .animal-grid{
   padding-top: 20px;
+  padding-right: 2px;
   align-content: space-between;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -22,7 +20,65 @@ h5{
 
 }
 .animal-card{
-  width: 300px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+
+}
+
+.card-title{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight:normal;
+
+}
+
+.card-text{
+  padding-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: lighter;
+
+}
+.card-img-top{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-dark {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background:black;
+  transition: background 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  display: block;
+}
+
+.btn-dark:hover {
+  background: black;
+  color: white;
+}
+
+.animal-card-wrapper{
+background-image: linear-gradient(to right top, #FA3CFF, #FA3CFF, #FA3CFF, #ffa700, #ff8b2c, #ff6f49, #ff5563, #2EDCFF, #2EDCFF,#FFF31F, #FFF31F, #f53284, #f8326f, #f8385a, #f44246, #ed4d31, #3A6EFF, #3A6EFF, #3A6EFF, #FFF31F, #FFF31F, #FFF31F, #06A935, #06A935, #06A935);
+  padding: 5px;
+  border-radius: 10px;
 
 }
 
