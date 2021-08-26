@@ -4,7 +4,9 @@ class Animal < ApplicationRecord
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
-  validates :description, presence: true
+  has_one_attached :photo
+
+  validates :description, presence: true, length: { in: 34..63 }
   validates :price, presence: true
   validates :species, presence: true
   validates :category, presence: true
@@ -12,5 +14,5 @@ class Animal < ApplicationRecord
   validates :requirement, presence: true
   validates :age_ago, presence: true
   validates :location, presence: true
-  validates :image, presence: true
+  validates :photo, presence: true
 end
