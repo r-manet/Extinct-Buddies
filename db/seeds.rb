@@ -38,7 +38,7 @@ puts 'Creating Animals...'
 #FFA700
 
 alphina = Animal.new({
-  description: "With a beautiful plumage, Alphina will rob you dry with grace, style and most importantly, class!",
+  description: "With a beautiful plumage, Alphina will rob you dry !",
   price: 231_000,
   species: "Raphus cucullatus",
   category: "Dodo",
@@ -90,6 +90,12 @@ rufus = Animal.new({
   location: "Paris"
 })
 
+file = URI.open('https://static01.nyt.com/images/2021/03/10/science/10sci-tasmaniantiger1/10sci-tasmaniantiger1-superJumbo.jpg')
+rufus.photo.attach(io: file, filename: 'rufus.png', content_type: 'image/png')
+rufus.save
+
+puts "rufus created!"
+
 manny = Animal.new({
   description: "Manny just wants to be left alone. He's a bit of a grump",
   price: 20_000,
@@ -111,7 +117,7 @@ puts "manny created!"
 
 
 scrat= Animal.new({
-  description: "Scrat is a well travelled creature! He may or may not have a slight obsession for acorns... ",
+  description: "He may or may not have a slight obsession for acorns... ",
   price: 2,
   species: "Cronopio dentiacutus",
   category: "Saber-toothed squirrel",
@@ -131,7 +137,7 @@ puts "scrat created!"
 
 
 diego = Animal.new({
-  description: "Diego has gone through a lot. He used to a double traitor. But now, he is a nice fella",
+  description: "He used to a double traitor, but now … he is a nice fella",
   price: 200_759,
   species: "Smilodon populator",
   category: "Saber-tooth tiger",
