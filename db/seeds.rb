@@ -41,7 +41,7 @@ alphina = Animal.create!({
   price: 231_000,
   species: "Raphus cucullatus",
   category: "Dodo",
-  name: "Alphina",
+  name: "Alphina ",
   requirement: "Only eats watermelons",
   age_ago: 231,
   user: user_array.sample,
@@ -69,7 +69,7 @@ rufus = Animal.create!({
   price: 40_104,
   species: "Thylacinus cynocephalus",
   category: "Tasmanian Tiger",
-  name: "Rufus",
+  name: "Rufus ",
   requirement: "A fat toothbrush",
   age_ago: 85,
   user: user_array.sample,
@@ -79,7 +79,7 @@ rufus = Animal.create!({
 })
 
 manny = Animal.create!({
-  description: "A bit of a grump",
+  description: "A bit of a grump,",
   price: 20_000,
   species: "Elephas primigenius",
   category: "Mammoth",
