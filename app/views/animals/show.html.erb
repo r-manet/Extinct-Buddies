@@ -18,6 +18,14 @@
           <p>What you need to know: <strong> <%= @animal.requirement %> </strong> </p>
 
           <%= link_to 'Book your animal', new_animal_booking_path(@animal) %>
+
+
+
+          <% if @animal.user == current_user%>
+            <p> <%= link_to 'Your animal has changed?', edit_animal_path(@animal) %></p>
+            <p> <%= link_to "Remove", animal_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
+          <% end %>
+
         </div>
     </div>
   </div>

@@ -28,16 +28,24 @@ class AnimalsController < ApplicationController
   end
 
   def update
-    if @animal.update(animal_params)
-      redirect_to animal_path(@animal)
+    if @animal.user == current_user
+      if @animal.update(animal_params)
+        redirect_to animal_path(@animal)
+      else
+        render :edit
+      end
     else
-      render :edit
+      return
     end
   end
 
   def destroy
-    @animal.destroy
-    redirect_to animals_path
+    if @animal.user == current_user
+      @animal.destroy
+      redirect_to animals_path
+    else
+      return
+    end
   end
 
   private
