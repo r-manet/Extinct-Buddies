@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 
 .master-container{
-padding-top: 20px;
+padding-top: 0px;
 height: 100vh;
 display:flex;
 align-items: flex-start;
@@ -15,10 +15,9 @@ background-size: cover;
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: black;
   transition: background 0.3s ease;
-  top: 35%;
-  left: 65%;
+  top: 33%;
+  left: 60%;
   position: absolute;
 }
 
