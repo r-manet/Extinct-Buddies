@@ -12,7 +12,7 @@ class AnimalsController < ApplicationController
         lat: animal.latitude,
         lng: animal.longitude,
         info_window: render_to_string(partial: "info_window", locals: { animal: animal }),
-        image_url: helpers.asset_url('black_marker.png')
+        image_url: helpers.asset_url('manuela_marker.png')
       }
     end
   end
