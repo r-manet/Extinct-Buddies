@@ -4,7 +4,7 @@ class Animal < ApplicationRecord
 
   has_one_attached :photo
 
-  validates :description, presence: true
+  validates :description, presence: true, length: { in: 34..63 }
   validates :price, presence: true
   validates :species, presence: true
   validates :category, presence: true
