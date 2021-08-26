@@ -1,5 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "components/map";
+
 h1{
   padding-top: 20px;
   justify-content: center;
@@ -17,13 +19,13 @@ h5{
   padding-top: 20px;
   align-content: space-between;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-
 }
 .animal-card{
   width: 300px;
-
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2)
 }
 
 .map-container{
@@ -31,14 +33,14 @@ h5{
 }
 
 #map{
-  border-radius: 48%;
-  box-shadow: 0 30px 70px rgba(5, 41, 2, 0.19), 0 6px 6px
-    rgba(0,0,0,0.23);
+  border-radius: 2%;
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
+  position: sticky;
+  top: 0px;
+  margin-top: 50px;
 }
 
 #map:hover{
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
+  border-style: groove;
 }
