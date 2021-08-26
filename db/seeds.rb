@@ -42,7 +42,7 @@ alphina = Animal.new({
   price: 231_000,
   species: "Raphus cucullatus",
   category: "Dodo",
-  name: "Alphina",
+  name: "Alphina ",
   requirement: "Only eats watermelons",
   age_ago: 231,
   user: user_array.sample,
@@ -82,20 +82,13 @@ rufus = Animal.new({
   price: 40_104,
   species: "Thylacinus cynocephalus",
   category: "Tasmanian Tiger",
-  name: "Rufus",
+  name: "Rufus ",
   requirement: "A fat toothbrush",
   age_ago: 85,
   user: user_array.sample,
   habitat: "forests and grasslands",
   location: "Paris"
 })
-
-file = URI.open('https://museumsvictoria.com.au/media/6015/tasmanian-tiger.jpg')
-rufus.photo.attach(io: file, filename: 'rufus.png', content_type: 'image/png')
-rufus.save
-
-puts "rufus created!"
-
 
 manny = Animal.new({
   description: "Manny just wants to be left alone. He's a bit of a grump",
