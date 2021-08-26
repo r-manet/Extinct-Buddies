@@ -35,7 +35,7 @@ user_array = [manuela, raph, catherine]
 
 puts 'Creating Animals...'
 
-
+#FFA700
 
 alphina = Animal.new({
   description: "With a beautiful plumage, Alphina will rob you dry with grace, style and most importantly, class!",
@@ -51,7 +51,7 @@ alphina = Animal.new({
 })
 
 puts "alphina on its way "
-file = URI.open('https://static.wikia.nocookie.net/iceage/images/7/76/Dab.png')
+file = URI.open('https://assets.mycast.io/characters/dodo-594502-normal.jpg')
 alphina.photo.attach(io: file, filename: 'alphina.png', content_type: 'image/png')
 alphina.save
 
@@ -59,7 +59,7 @@ puts "alphina created!"
 
 constantinople= Animal.new({
   description: "Constantinople is a sleepy boy, don't let him nap on your roof!",
-  price: 500_920,
+  price: 920,
   species: "Diplodocus longus",
   category: "Dinosaur",
   name: "Constantinople",
@@ -110,7 +110,7 @@ manny = Animal.new({
   location: "New York"
 })
 
-file = URI.open('https://static.wikia.nocookie.net/bstudios/images/0/05/Manny.png')
+file = URI.open('https://static.wikia.nocookie.net/parody/images/9/9a/Profile_-_Manny.png')
 manny.photo.attach(io: file, filename: 'manny.png', content_type: 'image/png')
 manny.save
 
@@ -150,7 +150,7 @@ diego = Animal.new({
   location: "Rio de Janeiro"
 })
 
-file = URI.open('https://static.wikia.nocookie.net/bstudios/images/5/54/Ice_Age_Diego_5.png')
+file = URI.open('https://i.pinimg.com/originals/90/cd/f2/90cdf2600ebaaf7ec225d9327b8c69ea.jpg')
 diego.photo.attach(io: file, filename: 'diego.png', content_type: 'image/png')
 diego.save
 puts "diego created!"
