@@ -13,9 +13,10 @@
     <%= f.input :price%>
     <%= f.input :description%>
     <%= f.input :photo, as: :file%>
+    <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-dark btn-lg btn-length"  %>
+  </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+
 <% end %>
