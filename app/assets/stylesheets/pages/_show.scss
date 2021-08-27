@@ -34,8 +34,9 @@
 }
 
 .book-button {
-  color: white;
-  padding: 8px 24px;
+  color: black;
+  font-size: 21px;
+  padding: 4px 21px;
   border-radius: 50px;
   background-color: transparent;
   transition: none !important;
@@ -102,5 +103,5 @@
 
 #requirement {
   font-size: 16px;
-  text-align: none;
+  text-align: revert;
 }
