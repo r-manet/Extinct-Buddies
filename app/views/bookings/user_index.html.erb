@@ -1,17 +1,19 @@
-
-
-
-
-<div class= "container23">
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2>Hey Buddy, Your order is confirmed!</h2>
-      <div>
-      <% @bookings.each do |item| %>
-        <ul>Your booking for <%= item.animal.name%> is on its way! We'll send you a shipping confirmation email with all the details of your booking</ul>
-      <% end %>
-    </div>
-    </div>
+<div class="image-container" style="background-image: url(<%= asset_url 'book.png' %>);">
+  <div class="container">
+  <div class="d-flex flex-row">
+        <div class="booking-grid">
+          <% @bookings.each do |booking| %>
+            <div class="booking-card-wrapper">
+              <div class="booking-card">
+                <%= cl_image_tag booking.animal.photo.key, class:"card-img-top"%>
+                <div class="card-body"style="background-color: white; height: 150px;">
+                  <p class="card-text"> Hey ❤️ your booking for <%= booking.animal.name%> is on its way! We'll send you a shipping confirmation email.</p>
+                  <%= link_to 'Your buddy details', animal_path(booking.animal), :class =>"btn btn-dark"%>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>
