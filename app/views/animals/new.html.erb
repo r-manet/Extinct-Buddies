@@ -1,12 +1,8 @@
-
-
-<div class="container">
-  <div class="d-flex justify-content-center">
-    <div class="col-sm-6">
-
-    <h1>Add a buddy !</h1>
-
+<div class="animal-new-wrapper">
+  <div class="image-animal">
+    <%= image_tag "buddy.png", class: "animal-logo-small"  %>
+  </div>
+  <div class="form-animal-new">
     <%= render "form", animal: @animal %>
-    </div>
   </div>
 </div>

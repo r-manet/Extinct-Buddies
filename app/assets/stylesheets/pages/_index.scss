@@ -4,11 +4,19 @@
 @import "login";
 @import "user";
 @import "components/map";
+@import "new";
 
 body{
   background-color: white;
 }
-
+h2{
+  font-family: "Roboto";
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  padding-left: 10px;
+  text-align: center;
+}
 h5{
   justify-content: center;
   text-align: center;
@@ -106,4 +114,11 @@ border-radius: 10px;
 
 #map:hover{
   border-style: groove;
+}
+.link-animal-new {
+    color: black;
+}
+
+a:hover{
+  text-decoration: none;
 }
