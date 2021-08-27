@@ -1,8 +1,17 @@
-<h1>Your bookings!</h1>
-<ol>
-  <div>
-    <% @bookings.each do |item| %>
-      <li>Your booking for <%= item.animal.name%> is from the <%= item.start_date.strftime("%d/%m/%Y at %H:%M") %> to the <%=item.end_time.strftime("%d/%m/%Y at %H:%M")  %></li>
-    <% end %>
+
+
+
+
+<div class= "container23">
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2>Hey Buddy, Your order is confirmed!</h2>
+      <div>
+      <% @bookings.each do |item| %>
+        <ul>Your booking for <%= item.animal.name%> is on its way! We'll send you a shipping confirmation email with all the details of your booking</ul>
+      <% end %>
+    </div>
+    </div>
   </div>
-</ol>
+</div>
