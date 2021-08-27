@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
 @import "login";
 @import "user";
 @import "components/map";
@@ -14,6 +15,11 @@ h5{
   padding-top: 20px;
   font-weight: 2px;
 }
+
+.container{
+  display: flex;
+}
+
 .animal-grid{
   padding-top: 20px;
   padding-right: 2px;
@@ -22,6 +28,7 @@ h5{
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 }
+
 .animal-card{
   width: 250px;
   border-radius: 10px;
@@ -35,7 +42,6 @@ h5{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight:normal;
-
 }
 
 .card-text{
@@ -47,7 +53,6 @@ h5{
   justify-content: center;
   align-items: flex-start;
   font-weight: lighter;
-
 }
 
 .card-img-top{
@@ -95,7 +100,8 @@ border-radius: 10px;
   transition: transform .8s ease-in-out;
   position: sticky;
   top: 0px;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 #map:hover{
