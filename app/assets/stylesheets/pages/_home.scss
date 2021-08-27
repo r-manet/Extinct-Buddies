@@ -1,22 +1,22 @@
 // Specific CSS for your home-page
 
 .master-container{
-padding-top: 20px;
-height: 100vh;
-display:flex;
-align-items: flex-start;
-justify-content: center;
-background-size: cover;
+  padding-top: 0px;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  max-width: 100%;
 }
 
 .btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: black;
   transition: background 0.3s ease;
-  top: 35%;
-  left: 65%;
+  top: 27%;
+  left: 60%;
   position: absolute;
 }
 

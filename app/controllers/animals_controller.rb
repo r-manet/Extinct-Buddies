@@ -3,7 +3,18 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
   def index
-    @animals = Animal.all
+    # @animals = Animal.all
+    # @animals = Animal.where.not(latitude: nil, longitude: nil)
+    @animals = Animal.geocoded
+
+    @markers = @animals.geocoded.map do |animal|
+      {
+        lat: animal.latitude,
+        lng: animal.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { animal: animal }),
+        image_url: helpers.asset_url('manuela_marker.png')
+      }
+    end
   end
 
   def show
