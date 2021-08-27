@@ -56,7 +56,7 @@
   width: 70%;
   margin: auto;
   max-width: 22em;
-  font-size: larger;
+  font-size: small;
 
   position: relative;
   box-sizing: border-box;
@@ -106,17 +106,6 @@
   text-align: revert;
 }
 
-.card-headline-position {
-  align-items: center;
-  margin-bottom: 6px;
-}
-.button-size {
-  width: 210px;
-}
-.btn-sizing {
-  display: flex !important;
-  padding: 10px;
-  height: 28px;
-  width: 90px;
-  text-decoration:none
+.rent-card {
+  border-radius: 5px;
 }
