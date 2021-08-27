@@ -1,32 +1,71 @@
-<div class="d-flex flex-column align-items-center">
-  <h1>Here is your animal buddy 🦖</h1>
-  <h2 class="text-center"><i> <%= @animal.name%> </i> </h2>
-  <%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="animal-content-container animal-card-wrapper">
+      <div>
+        <%= cl_image_tag @animal.photo.key, class: "img_animal_show"%>
+      </div>
 
-  <div class="animal-profile">
-    <div class="animal-card">
-        <div class="animal-detail">
-          <strong> <%= @animal.category %> </strong>
-          <p>Species: <strong> <%= @animal.species %> </strong> </p>
-          <p>Lived in: <strong> <%= @animal.habitat %> </strong> </p>
-          <p>Years ago 🌏: <strong> <%= @animal.age_ago %> </strong> </p>
-          <p>From: <strong> <%= @animal.location %> </strong> </p>
-          <p>Price: <strong> <%= @animal.price %>£ </strong> </p>
-          <i class="fa fa-book"></i>
-          <p>" <%= @animal.description %> "</p>
-          <i class="fa fa-heart" aria-hidden="true"></i>
-          <p>What you need to know: <strong> <%= @animal.requirement %> </strong> </p>
+      <div class="text-animal-container p-3">
+        <div class="d-flex justify-content-between">
+          <div class="animal_name_location">
+            <h3><%= @animal.name%></h3>
+            <p> <%= @animal.location %></p>
+          </div>
 
-          <%= link_to 'Book your animal', new_animal_booking_path(@animal) %>
-
-
-
-          <% if @animal.user == current_user%>
-            <p> <%= link_to 'Your animal has changed?', edit_animal_path(@animal) %></p>
-            <p> <%= link_to "Remove", animal_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
-          <% end %>
-
+          <div>
+            <strong> £<%= @animal.price %> </strong>
+          </div>
         </div>
+
+        <div class="d-flex justify-content-between">
+          <p>Last seen <%= @animal.age_ago %> years ago!</p>
+          <p><%= @animal.category %></p>
+          <p><%= @animal.species %></p>
+          <p><%= @animal.habitat%></p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <div>
+            <div>
+              <p><h4>Description</h4><%= @animal.description %></p>
+            </div>
+
+            <div>
+              <p> <em>Requirement :</em> <%= @animal.requirement %></p>
+            </div>
+
+          </div>
+
+          <div>
+            <p>Map</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="rent-card py-5">
+      <h1>Rent <%= @animal.name %> </h1>
+
+      <%= simple_form_for [@animal, @booking] do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <div class="form-inputs">
+          <%= f.input :start_date, as: :date, html5: true %>
+          <%= f.input :end_time, html5: true%>
+        </div>
+
+        <div class="form-actions">
+          <div class="gradient-box">
+            <%= f.button :button, type: :submit, class: "book-button" do %>
+              <p class="mb-0 font-weight-bold">Book me!</p>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
   </div>
+
+
 </div>
