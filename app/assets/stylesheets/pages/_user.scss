@@ -1,34 +1,97 @@
-.card-product {
-  overflow: hidden;
-  height: 150px;
-  width: 1000px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
+.container{
+  padding-top: 0px;
+  position: absolute;
+  top: 25%;
+}
+
+.image-container{
+ padding-top: 0px;
+  height: 100vh;
+  display:flex;
   align-items: center;
-  padding-left: 200px;
+  justify-content: center;
+  background-size: cover;
+  max-width: 100%;
+}
+body{
+  background-color: white;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+h5{
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 2px;
+}
+.booking-grid{
+  padding-top: 20px;
+  padding-right: 2px;
+  align-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
+.booking-card{
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+
+}
+
+.card-title{
   margin: 0;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight:normal;
+
 }
 
-.card-product p {
+.card-text{
+  padding-top: 5px;
+  text-align: center;
   font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: lighter;
+
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
+.card-img-top{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-dark {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: black;
+  transition: background 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  display: block;
+}
+
+.btn-dark:hover {
+  background: black;
+  color: white;
+}
+
+.booking-card-wrapper{
+background-image: linear-gradient(to right top, #ffa700, #ff8b2c, #FA3CFF, #FA3CFF, #FA3CFF, #ffa700, #ff8b2c, #ff6f49, #ff5563, #2EDCFF, #2EDCFF,#FFF31F, #FFF31F, #f53284, #f8326f, #f8385a, #f44246, #ed4d31, #3A6EFF, #3A6EFF, #3A6EFF, #FFF31F, #FFF31F, #FFF31F, #06A935, #06A935, #06A935, #2EDCFF, #2EDCFF,  #ffa700, #ff8b2c,);
+padding: 5px;
+border-radius: 10px;
 }

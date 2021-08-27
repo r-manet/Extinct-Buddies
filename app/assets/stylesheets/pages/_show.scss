@@ -30,11 +30,13 @@
 
 .animal_name_location p {
   font-weight: lighter;
+  font-size: 16px;
 }
 
 .book-button {
-  color: white;
-  padding: 8px 24px;
+  color: black;
+  font-size: 21px;
+  padding: 4px 21px;
   border-radius: 50px;
   background-color: transparent;
   transition: none !important;
@@ -94,6 +96,12 @@
   }
 }
 
-.rent-card {
 
+.text-animal-little-info p {
+  font-size: 16px;
+}
+
+#requirement {
+  font-size: 16px;
+  text-align: revert;
 }
