@@ -4,7 +4,7 @@
     <div class="col-md-6">
       <div class="animal-grid">
         <% @animals.each do |animal| %>
-          <div class="animal-card-wrapper">
+          <div class="animal-card-wrapper" style : {width: 260px}>
             <div class="animal-card">
               <%= cl_image_tag animal.photo.key, class:"card-img-top"%>
               <div class="card-body"style="background-color: white; height: 150px;">
