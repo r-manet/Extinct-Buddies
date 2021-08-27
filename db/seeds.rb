@@ -57,12 +57,12 @@ alphina.save
 
 puts "alphina created!"
 
-constantinople= Animal.new({
-  description: "Constantinople is a sleepy boy, don't let him nap on your roof!",
+roco = Animal.new({
+  description: "Roco is a sleepy boy, don't let him nap on your roof!",
   price: 920,
   species: "Diplodocus longus",
   category: "Dinosaur",
-  name: "Constantinople",
+  name: "Roco",
   requirement: "Mansions owner recomended",
   age_ago: 145_000_000,
   user: user_array.sample,
@@ -71,10 +71,10 @@ constantinople= Animal.new({
 })
 
 file = URI.open('https://static1.funidelia.com/238382-f4_big/inflatable-diplodocus-costume-for-adults-.jpg')
-constantinople.photo.attach(io: file, filename: 'constantinople.png', content_type: 'image/png')
-constantinople.save
+roco.photo.attach(io: file, filename: 'roco.png', content_type: 'image/png')
+roco.save
 
-puts "constantinople created!"
+puts "roco created!"
 
 
 rufus = Animal.new({

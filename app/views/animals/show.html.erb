@@ -8,8 +8,16 @@
       <div class="text-animal-container p-3">
         <div class="d-flex justify-content-between">
           <div class="animal_name_location">
-            <h3><%= @animal.name%></h3>
-            <p> <%= @animal.location %></p>
+            <div class="d-flex justify-content-start card-headline-position">
+              <h3><%= @animal.name%></h3>
+              <div class="d-flex justify-content-around px-2 button-size">
+                <% if @booking.user == current_user%>
+                  <%= link_to 'Edit me', edit_animal_path(@animal), class:"btn-dark btn-sizing text-decoration-none" %>
+                  <%= link_to 'Delete me', animal_path(@animal), class:"btn-dark btn-sizing text-decoration-none", method: :delete, data: { confirm: "Are you sure?"}%>
+                <% end %>
+              </div>
+            </div>
+            <p class="text-left"> <%= @animal.location %></p>
           </div>
 
           <div>
@@ -35,10 +43,6 @@
             </div>
 
           </div>
-
-          <%# <div>
-            <p>Map</p>
-          </div> %>
         </div>
       </div>
     </div>
@@ -63,7 +67,10 @@
             <% end %>
           </div>
         </div>
+
       <% end %>
+
+
     </div>
 
   </div>
