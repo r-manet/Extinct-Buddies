@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="rent-card py-5">
+    <div class="rent-card py-5 border border-dark">
       <%# <h1>Rent <%= @animal.name %>
       <%# </h1> %>
 
@@ -55,7 +55,7 @@
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-        <div class="form-inputs">
+        <div class="form-inputs border border-white">
           <%= f.input :start_date, as: :date, html5: true %>
           <%= f.input :end_time, html5: true%>
         </div>
@@ -69,8 +69,6 @@
         </div>
 
       <% end %>
-
-
     </div>
 
   </div>
