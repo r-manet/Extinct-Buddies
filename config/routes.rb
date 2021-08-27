@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # get '/animals', to: 'animals#index'
 
   resources :animals do
-    resources :bookings, only: [:show, :new, :create]
+    resources :bookings, only: [:show, :create]
   end
 
   get '/my_bookings', to: 'bookings#user_index'
